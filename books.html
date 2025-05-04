@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Book - Shrikrishn Arogyadham</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Shrikrishn Arogyadham Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="books.html" class="active">Our Book</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Book Section -->
+    <section class="book-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Book</h2>
+            </div>
+            
+            <div class="book-container">
+                <div class="book-image">
+                    <img src="images/book1.jpg" alt="Ayurvedic Healing Book">
+                </div>
+                
+                <div class="book-details">
+                    <h3>Yog Athapasun Itiparyant</h3>
+                    <p class="author">By Dr.Prasad Sanagar</p>
+                    <p class="price">₹499</p>
+                    
+                    <div class="description">
+                        <p>This comprehensive guide to Ayurvedic medicine brings ancient healing wisdom to modern readers. Written by our experienced Ayurvedic practitioner, this book covers:</p>
+                        <ul>
+                            <li>Fundamental principles of Ayurveda</li>
+                            <li>Personalized health approaches based on doshas</li>
+                            <li>Herbal remedies for common ailments</li>
+                            <li>Dietary guidelines for optimal health</li>
+                            <li>Daily routines for balance and wellness</li>
+                            <li>Traditional detoxification methods</li>
+                        </ul>
+                        <p>Whether you're new to Ayurveda or looking to deepen your knowledge, this book serves as an invaluable resource for natural healing and preventive healthcare.</p>
+                    </div>
+                    
+                    <div class="buy-options">
+                        <a href="https://amzn.in/d/3XxNEyb" target="_blank" class="buy-btn" style="text-decoration: none;">Buy Now</a>
+
+                        <button class="buy-btn" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Near Goal Circle, Rankala Stand, Kolhapur</p>
+                        <p><i class="fas fa-phone"></i> +91 XXXXXXXXXX</p>
+                        <p><i class="fas fa-envelope"></i> info@shrikrishnarogyadham.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                    <p>Sunday: 10:00 AM - 2:00 PM</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="books.html">Our Book</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Shrikrishn Arogyadham. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart() {
+            const book = {
+                title: "Yog Athapasun Itiparyant",
+                author: "Dr.Prasad Sanagar",
+                price: 499,
+                image: "images/book1.jpg"
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(book);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Book added to cart!");
+        }
+    </script>
+</body>
+</html>
